@@ -1,0 +1,470 @@
+<!DOCTYPE HTML>
+
+<head>
+
+ <title>SofiArtworks.com| Ishaque Ahmed</title>
+      <meta name="description" content="classic sufi, art, painting, calligraphy, arabic, persian, urdu, gallery">
+    <meta name="keywords" content="classic sufi, art, painting, calligraphy, arabic, persian, urdu, gallery">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    
+<!-- Google Fonts -->
+    
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+<!-- CSS Files -->
+
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="menu/css/simple_menu.css">
+    <link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="css/nivo-slider.css" type="text/css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="boxes/css/style6.css" />
+
+<!-- JS Files -->
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+    
+    <script type="text/javascript" src="js/custom.js"></script>
+    <script type="text/javascript" src="js/slides/slides.min.jquery.js"></script>
+    <script type="text/javascript" src="js/cycle-slider/cycle.js"></script>
+    <script type="text/javascript" src="js/nivo-slider/jquery.nivo.slider.js"></script>
+    <script type="text/javascript" src="js/tabify/jquery.tabify.js"></script>
+    <script type="text/javascript" src="js/prettyPhoto/jquery.prettyPhoto.js"></script>
+    <script type="text/javascript" src="js/twitter/jquery.tweet.js"></script>
+    <script type="text/javascript" src="js/scrolltop/scrolltopcontrol.js"></script>
+    <script type="text/javascript" src="js/portfolio/filterable.js"></script>
+    <script type="text/javascript" src="js/modernizr/modernizr-2.0.3.js"></script>
+    <script type="text/javascript" src="js/easing/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="js/kwicks/jquery.kwicks-1.5.1.pack.js"></script>
+    <script type="text/javascript" src="js/swfobject/swfobject.js"></script>
+    <!-- FancyBox -->
+    <link rel="stylesheet" type="text/css" href="js/fancybox/jquery.fancybox.css" media="all">
+    <script type="text/javascript" src="js/fancybox/jquery.fancybox-1.2.1.js"></script>
+
+<script type="text/javascript">
+// <![CDATA[
+var border=100; // how wide is each border in pixels
+var effects=3; // how many of the effect are on the page
+var speed=50; // how fast is the animation (lower is faster)
+var colours=new Array("#9cf", "#c9f", "#fc9", "#f9c", "#cf9", "#9fc", "#6ff", "#f6f", "#ff6");
+// above line lists colours for the groovy effect (the list can be as long or short as you like)
+
+/****************************
+*1970s Groovy WebPage Effect*
+*(c)2008-13 mf2fm web-design*
+*  http://www.mf2fm.com/rv  *
+* DON'T EDIT BELOW THIS BOX *
+****************************/
+
+function addLoadEvent(funky) {
+  var oldonload=window.onload;
+  if (typeof(oldonload)!='function') window.onload=funky;
+  else window.onload=function() {
+    if (oldonload) oldonload();
+    funky();
+  }
+}
+
+addLoadEvent(yowzah);
+
+var swide, shigh, boddie;
+var h=new Array();
+var v=new Array();
+var op=1/(effects+1);
+function yowzah() { if (document.getElementById) {
+  var i, d, s;
+  boddie=document.createElement("div");
+  s=boddie.style;
+  s.position="fixed";
+  s.backgroundColor="transparent";
+  s.top="0px";
+  s.left="0px";
+  s.width="100%";
+  s.zIndex="-1";
+  set_width();
+  i=document.body.style.backgroundColor;
+  if (document.body.parentNode) {
+    if (i) document.body.parentNode.style.backgroundColor=i;
+    document.body.style.backgroundColor="transparent";
+  }
+  document.body.insertBefore(boddie, document.body.firstChild);
+  for (i=0; i<effects*10; i+=10) {
+    d=document.createElement("div");
+    s=d.style;
+    s.left="0px";
+	s.width="100%";
+    h[i]=Math.floor(Math.random()*(shigh-border)/3);
+    h[i+1]=shigh-Math.floor(Math.random()*(shigh-border)/3);
+    h[i+2]=(Math.random()<0.5?1:-1)*scat(0);
+    h[i+3]=(Math.random()<0.5?1:-1)*scat(h[i+2]);
+    s.position="absolute";
+    s.top=h[i]+"px";
+    s.height=(h[i+1]-h[1])+"px";
+    s.borderStyle="solid";
+    s.borderWidth=border+"px 0px";
+    jazzy(s, 'borderTopColor');
+	jazzy(s, 'borderBottomColor');
+    jazzy(s, 'backgroundColor');
+    s.opacity=op;
+    if (navigator.appName=="Microsoft Internet Explorer") s.filter="alpha(opacity="+(100*op)+")";
+    h[i+5]=s;
+    boddie.appendChild(d);
+  }
+  for (i=0; i<effects*10; i+=10) {
+    d=document.createElement("div");
+    s=d.style;
+	s.top="0px";
+    s.height="100%";
+    v[i]=Math.floor(Math.random()*(swide-border)/3);
+    v[i+1]=swide-Math.floor(Math.random()*(swide-border)/3);
+    v[i+2]=(Math.random()<0.5?1:-1)*scat(0);
+    v[i+3]=(Math.random()<0.5?1:-1)*scat(v[i+2]);
+    s.position="absolute";
+    s.left=v[i]+"px";
+    s.width=(v[i+1]-v[i])+"px";
+    s.borderStyle="solid";
+    s.borderWidth="0px "+border+"px";
+    jazzy(s, 'borderLeftColor');
+    jazzy(s, 'borderRightColor');
+    jazzy(s, 'backgroundColor');
+    if (navigator.appName=="Microsoft Internet Explorer") s.filter="alpha(opacity="+(100*op)+")";
+    else s.opacity=op;
+    v[i+5]=s;
+    boddie.appendChild(d);
+  }
+  setInterval('groovy()', speed);
+}}
+
+var old_jazz=false;
+function jazz() {
+	var new_jazz;
+	do { new_jazz=colours[Math.floor(Math.random()*colours.length)]; }
+	while ( new_jazz==old_jazz );
+	old_jazz=new_jazz;
+	return (new_jazz);
+}
+
+function jazzy(hip, jive) {
+	var new_jive;
+	do { new_jive=colours[Math.floor(Math.random()*colours.length)]; }
+	while (new_jive==hip[jive]);
+	hip[jive]=new_jive;
+}
+
+function scat(no) {
+	var yes;
+	no=Math.abs(no);
+	do { yes=2+Math.floor(Math.random()*3); }
+	while ( no==yes );
+	return (yes);
+}
+
+function groovy() {
+  var i;
+  for (i=0; i<effects*10; i+=10) {
+	h[i]+=h[i+2];
+	h[i+1]+=h[i+3];
+	if (h[i+1]-h[i]<5) {
+	  h[i+4]=h[i+2]; 
+	  h[i+2]=h[i+3];
+	  h[i+3]=h[i+4];
+	  jazzy(h[i+5], 'backgroundColor');
+	}
+    if (h[i]<-border) {
+		if (h[i+2]<0 && Math.random()<1/border) {
+			h[i+2]=scat(h[i+3]);
+			jazzy(h[i+5], 'borderTopColor');
+		}
+	}
+	if (h[i+1]>shigh) {
+		if (h[i+3]>0 && Math.random()<1/border) {
+			h[i+3]=-scat(h[i+2]);
+			jazzy(h[i+5], 'borderBottomColor');
+		}
+	}
+	h[i+5].top=h[i]+"px";
+    h[i+5].height=(h[i+1]-h[i])+"px";
+
+	v[i]+=v[i+2];
+	v[i+1]+=v[i+3];
+	if (v[i+1]-v[i]<5) {
+	  v[i+4]=v[i+2];
+	  v[i+2]=v[i+3];
+	  v[i+3]=v[i+4];
+	  jazzy(v[i+5], 'backgroundColor');
+	}
+	if (v[i]<-border) {
+		if (v[i+2]<0 && Math.random()<1/border) {
+			v[i+2]=scat(v[i+3]);
+			jazzy(v[i+5], 'borderLeftColor');
+		}
+	}
+	if (v[i+1]>swide) {
+		if (v[i+3]>0 && Math.random()<1/border) {
+			v[i+3]=-scat(v[i+2]);
+			jazzy(v[i+5], 'borderRightColor');
+		}
+	}
+	v[i+5].left=v[i]+"px";
+    v[i+5].width=(v[i+1]-v[i])+"px";
+  }
+}
+
+window.onresize=set_width;
+function set_width() {
+  var sw_min=999999;
+  var sh_min=999999;
+  if (document.documentElement && document.documentElement.clientWidth) {
+    if (document.documentElement.clientWidth>0) sw_min=document.documentElement.clientWidth;
+    if (document.documentElement.clientHeight>0) sh_min=document.documentElement.clientHeight;
+  }
+  if (typeof(self.innerWidth)!="undefined" && self.innerWidth) {
+    if (self.innerWidth>0 && self.innerWidth<sw_min) sw_min=self.innerWidth;
+    if (self.innerHeight>0 && self.innerHeight<sh_min) sh_min=self.innerHeight;
+  }
+  if (document.body.clientWidth) {
+    if (document.body.clientWidth>0 && document.body.clientWidth<sw_min) sw_min=document.body.clientWidth;
+    if (document.body.clientHeight>0 && document.body.clientHeight<sh_min) sh_min=document.body.clientHeight;
+  }
+  if (sw_min==999999 || sh_min==999999) {
+    sw_min=800;
+    sh_min=600;
+  }
+  swide=sw_min;
+  shigh=sh_min;
+  boddie.style.height=shigh+"px";
+} 
+// ]]>
+</script>
+
+
+</head>
+
+<body>
+
+
+    <div class="header">
+    
+    <div id="site_title"><a href="index.html"><img src="img/logo.png" /></a></div>
+
+    <!-- Main Menu -->
+    
+  <ol id="menu">
+             <li class="active_menu_item"><a href="product_viewer.html">Home</a>
+ <li><a href="About.html">About Artist</a>             
+ <li><a href="nivo.html">Art Gallery - Nivo Slider</a>
+        
+        <li><a href="ei_slider.html">Art Gallery - EI Slider</a></li>
+              
+        <li><a href="fullscreen_gallery.html">Art Gallery - Fullscreen Slider</a>
+                
+               <li><a href="index.html">Art Gallery -Coupon View</a></li>
+<li><a href="contact.html">Contact</a></li>
+    </ol>
+    
+    
+    </div><!-- END header -->
+
+
+    <div id="container">
+
+
+<div class="two-third">
+
+    <div id="slider3" class="nivoSlider" style="width: 630px; height: 280px">
+        <a href="tabs.html"><img title="Ishaque Ahmed" src="img/demo/slide_31.png" alt="" width="630" height="280" /></a>
+        <img title="Ishaque Ahmed" src="img/demo/slide_21.png" alt="" width="630" height="280" />
+    </div>
+     
+<p><h2>
+Date of Birth: 4th august, 1942 <br>
+Birth: Jodhpur, Rajasthan
+<br></h2><h3>
+With a touch of mysticism , Artist Ishaque Ahmed has dedicated his life towards making contribution in philanthropy through the artwork with impeccable creativity. While choosing warm colors as a token of native place, he has created such expressions in Paintings that have left many with wonder.
+Genius in matter of subtle color spectrums & display combinational virtuosity in Photography & Paintings as the merit.</p></h3>
+<h2>Earlier Work:</h2> 
+<ul>
+<li>1961-1962, Indore, Textile Industry (Hukmi Chandra mill), worked as Textile Designer</li>
+<li>1963, Jodhpur, Teacher in Ishaqiya school </li>
+<li>1965- till date of retirement, Jodhpur, Worked in Education Dept., got selected & moved to J.N.V.U.</li>
+<p>
+<ul>
+<li>1967-2002, Career, Dextrous Artist cum Photographer in J.N.V.U., Zoology Department, Assistance to Phd. scholars<li/>
+<li>After 1980, contributions in Artist Gaddi Workshop in Jaipur, Rajasthan Lalit-Kala Academy, Pallete and various other prestigious exhibitions/art-camps being organized in Rajasthan & Delhi.</p></li></ul>
+</ul>
+<h2>Domain</h2>
+<h3><p>
+Painting(Pastel, Acrylic, Oil), Serigraphy, Calligraphy, Photography(micro, macro), Philosophy, Sufi writing etc.
+</p></h3>
+<div style="clear:both"></div>
+<div class="fb-comments" data-href="http://sufiartworks.ga/About.html" data-width="500" data-numposts="5"></div>
+
+
+<div class="one-third last">
+<h2>Our Startup</h2>
+<img src="img/frontpage_thumb2.png" alt="" />
+<p align="center" >Every artwork posses rhythms that beautifies it. Whether it be rhythm of colors that are in paintings, rhythm of notes/swara in raga/melody, Rhythm of postures in dance etc.These rhythms can be identified and coded into computing environment.  </p >
+<p align="center">   </p >
+<p align="center"> </p>
+
+</div>
+
+
+<div class="one-third last">
+<h2>Sofiartworks.com</h2>
+<img src="img/frontpage_thumb1.png" alt="" />
+<p align="center" >We invite all techies who are art lovers from all around the world towards addressing this issue and counter it using technology as motivating tool. </p>
+
+</div>
+
+
+</div><!-- close two third -->
+
+
+      <div class="sidebar_right">
+      
+<h2><img src="img/icon_fb.png" alt="Facebook"> <a href=" https://www.sufiartworks.ga/facebookpage.html">Facebook Connect</a></h2> 
+     
+
+
+<div style="clear:both"></div>
+      
+      <h2>Media Capture</h2><h3>(Hindi Daily - Dainik Bhaskar)</h3>
+<div align="center"><iframe src="autumn_leaves.html" width="320" height="650"></iframe></div>      
+      <img src="#" alt="" />
+      
+
+
+
+      
+      <ul id="tabify_menu" class="menu_tab" style="margin: 0;">  
+          <li class="active"><a href="#fane1">Aim</a></li>
+          <li><a href="#fane2">Efforts</a></li>
+          <li><a href="#fane3">Impact</a></li>     
+      </ul>
+      
+      
+      <div id="fane1" class="tab_content">
+         
+         <div class="tab_article">
+         <img src="img/thumb1.jpg" alt="" />
+         <p>We are trying to bridge art and tech. Why? Because most of our local artist who are not techies and English speaking but are exceptional, they are looking for visibility in an environment that is fair, global and inclusive.</p>
+         </div>
+         
+         <div class="tab_article">
+         <img src="img/thumb1.jpg" alt="" />
+         <p>This is one of the main cause why art is dying and we need to save and preserve that.</p>
+         </div>
+         
+                  
+      </div>
+      
+      <div id="fane2" class="tab_content">
+          <h3>On-going Research</h3>
+          <p>We are reasearching on machine learning algorithms that can be trained based on the rhythms any art work is producing. </p>
+      </div>
+      
+      <div id="fane3" class="tab_content">
+          <h3>Fine Art Analysis</h3>   
+          <p>We are trying to figure out parameters that can report out scientifically any art work to be fall in category of fine art.</p>
+      </div>
+      
+      
+
+        
+      </div><!-- end sidebar right -->
+      
+      
+      <div style="clear:both; height: 40px"></div>
+      
+    <h2>Transparent and Fair system exclusively for under-rated Artist.</h2>
+      
+                <ul class="ca-menu" style="margin:0">
+                    <li>
+                        <a href="#">
+                            <span class="ca-icon">ML</span>
+                            <div class="ca-content">
+                                <h2 class="ca-main">Machine Learning <br /> Service</h2>
+                                <h3 class="ca-sub">Creating Global Standards</h3>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="ca-icon">F</span>
+                            <div class="ca-content">
+                                <h2 class="ca-main">Fine Art Inspection <br />Digital Evaluation</h2>
+                                <h3 class="ca-sub">Advanced use of data processing technology</h3>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="ca-icon">I</span>
+                            <div class="ca-content">
+                                <h2 class="ca-main">Infographical <br /> Scanning</h2>
+                                <h3 class="ca-sub">Understanding visually</h3>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="ca-icon">S</span>
+                            <div class="ca-content">
+                                <h2 class="ca-main">Sophisticated <br /> Team</h2>
+                                <h3 class="ca-sub">Professionals in action</h3>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+      
+      
+      
+      <div style="clear:both; height: 40px"></div>
+      
+      </div><!-- end container -->
+
+    <div id="footer">
+
+    <!-- First Column -->
+
+    <div class="one-fourth">
+        <h3>Special Thanks - </h3>
+            We would like to show our sincere gratitude to Ms. Sushma Hegde & Ms. Sonia Dharamshalini, for extending their helping hand & encourage our art work with a loving support.
+    </div>
+    
+    <!-- Second Column -->
+    
+    <div class="one-fourth">
+        <h3>Contact Us</h3>
+            <ul class="footer_links">
+                <li><a href="#">Email: ishaqueart42@gmail.com</a></li>
+              <li><a href="#">Mobile: +91 946 108 8691</a></li>
+            </ul>
+    </div>
+    
+    <!-- Third Column -->
+    
+    <div class="one-fourth">
+        <h3>Description</h3>Ishaque Ahmed is famous artist from Suncity(Jodhpur, Rajasthan). 
+         Paintings, Photography(Macro & Micro), Serigraphy, Calligraphy and Philosophy are areas of his expertise.
+           
+    </div>
+    
+    <!-- Fourth Column -->
+    
+    <div class="one-fourth last">
+        <h3>Socialize</h3>
+            <a href="https://www.sufiartworks.ga/facebookpage.html"><img src="img/icon_fb.png" alt="Facebook"></a>
+            <a href="https://www.sufiartworks.ga/facebookpage.html"><img src="img/icon_twitter.png" alt="Facebook"></a>
+            <a href="https://www.sufiartworks.ga/facebookpage.html"><img src="img/icon_in.png" alt="Facebook"></a>
+    </div>
+
+    <div style="clear:both"></div>
+        <div id="social_icons" align="center"></br>Copyright &copy; 2020. All Rights Reserved </br>SofiArtworks.com By <a>Ishaque Ahmed</a>
+          </div>
+    </div> <!-- END footer -->
+
+<h4 align="center"> <a href="http://www.nausheen.tk">Webmaster</a></h4>
+
+</body>
+</html>

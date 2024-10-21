@@ -1,0 +1,214 @@
+
+<!DOCTYPE HTML>
+
+<head>
+
+<title>SofiArtworks.com| Ishaque Ahmed</title>
+      <meta name="description" content="classic sufi, art, painting, calligraphy, arabic, persian, urdu, gallery">
+    <meta name="keywords" content="classic sufi, art, painting, calligraphy, arabic, persian, urdu, gallery">
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    
+<!-- Google Fonts -->
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+<!-- CSS Files -->
+
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="menu/css/simple_menu.css">
+    <link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="css/nivo-slider.css" type="text/css" media="screen"/>
+
+<!-- Contact Form -->    
+    
+    <link href="contact_form/css/style.css" media="screen" rel="stylesheet" type="text/css"/>
+    <link href="contact_form/css/uniform.css" media="screen" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+    <script type="text/javascript" src="contact_form/js/jquery.tools.js"></script>
+    <script type="text/javascript" src="contact_form/js/jquery.uniform.min.js"></script>
+    <script type="text/javascript" src="contact_form/js/main.js"></script>
+
+<script type="text/javascript">
+// <![CDATA[
+var bgcolour="#ffffff"; // background colour
+var hlcolour="#CCCCFF"; // highlight colour
+var speed=250; // speed colours change, 1 second = 1000
+
+/****************************
+*    Phone-In Text Effect   *
+*(c) 2003-6 mf2fm web-design*
+*  http://www.mf2fm.com/rv  *
+* DON'T EDIT BELOW THIS BOX *
+****************************/
+var p_txt;
+window.onload=function() { if (document.getElementById) {
+  var phoni;
+  var phone=document.getElementById("phonein");
+  p_txt=phone.firstChild.nodeValue;
+  while (phone.childNodes.length) phone.removeChild(phone.childNodes[0]);
+  for (var i=0; i<p_txt.length; i++) {
+    phoni=document.createElement("div");
+	phoni.style.display="inline";
+    phoni.setAttribute("id", "phon"+i);
+    phoni.appendChild(document.createTextNode(p_txt.charAt(i)));
+    phone.appendChild(phoni);
+  }
+  phone_me((p_txt=p_txt.length)-1);
+}}
+
+function phone_me(p_cnt) {
+  var p_tmp=document.getElementById("phon"+p_cnt);
+  p_tmp.style.fontWeight="normal";
+  if (document.all) p_tmp.style.filter='';
+  p_tmp.style.backgroundColor=bgcolour;
+  p_cnt=++p_cnt%p_txt;
+  p_tmp=document.getElementById("phon"+p_cnt);
+  if (p_tmp.firstChild.nodeValue!=" ") {
+    p_tmp.style.fontWeight="bold";
+    if (document.all) p_tmp.style.filter="GLOW(strength=3, color=#"+bgcolour+")";
+    p_tmp.style.backgroundColor=hlcolour;
+  }
+  setTimeout("phone_me("+p_cnt+")", speed);
+}
+// ]]>
+</script>
+
+
+</head>
+
+<body>
+
+    <div class="header">
+    
+    <div id="site_title"><a href="index.html"><img src="img/logo.png" /></a></div>
+
+    <!-- Main Menu -->
+    
+   <ol id="menu">
+             <li class="active_menu_item"><a href="product_viewer.html">Home</a>
+ <li><a href="About.html">About Artist</a>             
+ <li><a href="nivo.html">Art Gallery - Nivo Slider</a>
+        
+        <li><a href="ei_slider.html">Art Gallery - EI Slider</a></li>
+              
+        <li><a href="fullscreen_gallery.html">Art Gallery - Fullscreen Slider</a>
+                
+               <li><a href="index.html">Art Gallery -Coupon View</a></li>
+<li><a href="contact.html">Contact</a></li>
+    </ol>
+    
+    
+    </div>
+<!-- END header -->
+  
+    <div class="sub_header"></div>
+
+
+    <div id="container">
+ 
+    <div class="one-half">   <div class="heading_bg"><h2>Contact us today!</h2></div>
+
+                 <p><strong>SofiArtworks.com | By Artist - Mr. Ishaque Ahmed </strong><br />
+          Chhami ka dhada <br />
+          Near Raj-Mahal Girls Higher Sec. School <br />
+          Jodhpur (Rajasthan), INDIA<br /><br />
+          Mob: (+91) 94 610 88 691<br />
+       <span id="phonein">  mail: ishaqueart42@gmail.com </span>
+          </p>          
+           <div class="heading_bg"><h2>Where to find us</h2></div>
+<div class="google-maps">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3576.884072598938!2d73.02631795!3d26.297857899999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39418db0721ea413%3A0x825b184d3c4bfbea!2sRaj+Mahal+School!5e0!3m2!1sen!2sin!4v1433700615694" width="400" height="400" frameborder="0" style="border:0"></iframe>
+<br /><small><a href="http://www.google.co.in/maps/place/Gulab+Sagar,+Jodhpur,+Rajasthan+342001/@26.2981878,73.0264272,18z/data=!4m2!3m1!1s0x39418dba86fd39e1:0x766bf37d2f29168e!6m1!1e1">Jodhpur</a></small>
+    </div>
+</div>   
+<div class="one-half last">
+         <div class="heading_bg"><h2>Send E-mail</h2></div>
+         <!-- Edit process_form.php to make the form work with your e-mail address. If you need to create more forms go to www.csstemplateheaven.com/tools/form_builder 
+         IMPORTANT! Change action="#" to action="contact_form/process_form.php"
+         -->
+        <form class="forms" action="contact/form_handler.php" method="post">
+            <fieldset>
+              <ol>
+                <li class="form-row text-input-row">
+                  <label>Name</label><br>
+                  <input type="text" name="name" value="" class="text-input required" title=""/>
+                </li>
+                 <li class="form-row text-input-row">
+                  <label>Mobile/Telephone</label><br>
+                  <input type="text" name="name" value="" class="text-input required" title="" />
+                </li>
+                <li class="form-row text-input-row">
+                  <label>Email</label><br>
+                  <input type="text" name="email" value="" class="text-input required email" title="" />
+                </li>
+                <label>Message</label><br>
+                <li class="form-row text-area-row">
+                  <textarea name="message" class="text-area required"></textarea>
+                </li>
+                <li class="form-row hidden-row">
+                  <input type="hidden" name="hidden" value="" />
+                </li>
+                <li class="button-row"><br>
+                  <input type="submit" value="Submit" name="submit" class="btn-submit" />
+                </li>
+              </ol>
+              <input type="hidden" name="v_error" value="Required" />
+              <input type="hidden" name="v_email" value="Enter a valid email" />
+            </fieldset>
+          </form>
+    <!--END form ID contact_form -->
+   
+    </div>
+
+    <div style="clear:both; height: 40px"></div>
+
+    </div><!-- close container -->
+
+    <div id="footer">
+
+    <!-- First Column -->
+
+    <div class="one-fourth">
+        <h3>Special Thanks - </h3>
+            <ul class="footer_links">
+                <li><a href="#"> We would like to show our sincere gratitude to Ms. Sushma Hegde & Ms. Sonia Dharamshalini, for extending their helping hand & encourage our art work with a loving support.</a></li>
+               </ul>
+    </div>
+    
+    <!-- Second Column -->
+    
+    <div class="one-fourth">
+        <h3>Contact Us</h3>
+            <ul class="footer_links">
+                <li><a href="#">Email: ishaqueart42@gmail.com</a></li>
+              <li><a href="#">Mobile: +91 946 108 8691</a></li>
+            </ul>
+    </div>
+    
+    <!-- Third Column -->
+    
+    <div class="one-fourth">
+        <h3>Description</h3>
+        Ishaque Ahmed is famous artist from Suncity(Jodhpur, Rajasthan). 
+         Paintings, Photography(Macro & Micro), Serigraphy, Calligraphy and Philosophy are areas of his expertise.
+        
+                
+    </div>
+    
+    <!-- Fourth Column -->
+    
+    <div class="one-fourth last">
+        <h3>Socialize</h3>
+            <a href="https://www.sufiartworks.ga/facebookpage.html"><img src="img/icon_fb.png" alt="Facebook"></a>
+            <a href="https://www.sufiartworks.ga/facebookpage.html"><img src="img/icon_twitter.png" alt="Facebook"></a>
+            <a href="https://www.sufiartworks.ga/facebookpage.html"><img src="img/icon_in.png" alt="Facebook"></a>
+    </div>
+
+    <div style="clear:both"></div>
+    <div id="social_icons" align="center"></br>Copyright &copy; 2020. All Rights Reserved </br>SofiArtworks.com by <a>Ishaque Ahmed </a>
+          </div>
+    </div> <!-- END footer -->
+
+<h4 align="center"> <a href="http://www.nausheen.tk">Webmaster</a></h4>
+</body>
+</html>
